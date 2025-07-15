@@ -1,0 +1,55 @@
+Standard Transformer Model - Multiple Runs Experiment Results
+======================================================================
+Experiment Date: 2025-07-14 21:25:10
+Number of runs per prediction: 5
+Training epochs per run: 150
+Model architecture: Transformer (d_model=128, num_heads=8, num_layers=4)
+
+SHORT-TERM PREDICTION (90 days)
+----------------------------------------
+Configuration: Past 90 days -> Future 90 days (recursive prediction)
+
+MSE Results (5 runs):
+  Run 1: 222565.4156
+  Run 2: 160674.7542
+  Run 3: 154149.6495
+  Run 4: 129472.1863
+  Run 5: 135038.6316
+  Mean: 160380.1274
+  Std:  33176.5217
+
+MAE Results (5 runs):
+  Run 1: 386.0260
+  Run 2: 314.8817
+  Run 3: 314.1543
+  Run 4: 287.4522
+  Run 5: 294.9567
+  Mean: 319.4942
+  Std:  34.9430
+
+LONG-TERM PREDICTION (365 days)
+----------------------------------------
+Configuration: Past 90 days -> Future 365 days (recursive prediction)
+
+MSE Results (5 runs):
+  Run 1: 319597.5560
+  Run 2: 325356.6549
+  Run 3: 290838.3111
+  Run 4: 282386.7736
+  Run 5: 593396.9768
+  Mean: 362315.2545
+  Std:  116693.6311
+
+MAE Results (5 runs):
+  Run 1: 448.3889
+  Run 2: 466.1239
+  Run 3: 432.2860
+  Run 4: 430.7705
+  Run 5: 623.6696
+  Mean: 480.2478
+  Std:  72.8459
+
+COMPARISON SUMMARY
+----------------------------------------
+Short-term (90 days):  MSE = 160380.1274 ± 33176.5217, MAE = 319.4942 ± 34.9430
+Long-term (365 days): MSE = 362315.2545 ± 116693.6311, MAE = 480.2478 ± 72.8459
